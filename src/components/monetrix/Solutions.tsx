@@ -26,7 +26,7 @@ const solutions = [
 
 export function Solutions() {
   return (
-    <section className="relative px-4 py-20 sm:py-24">
+    <section id="solutions" className="relative px-4 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -107,6 +107,10 @@
   box-shadow: 0 0 40px -8px rgba(255, 45, 85, 0.5), 0 0 80px -20px rgba(138, 43, 226, 0.3);
 }
 
+@utility glow-orange {
+  box-shadow: 0 0 40px -8px rgba(255, 125, 0, 0.5);
+}
+
 @utility no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -114,3 +118,68 @@
     display: none;
   }
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  border: 2px solid #0a0a0a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff7d00 0%, #ff2d55 50%, #8a2be2 100%);
+}
+
+/* Floating animation for glowing backgrounds */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-40px, 40px) scale(1.05);
+  }
+}
+
+@utility animate-float-slow {
+  animation: float-slow 20s infinite ease-in-out;
+}
+
+@utility animate-float-medium {
+  animation: float-medium 15s infinite ease-in-out;
+}
+
+/* Rainbow Glowing Border Animation */
+@keyframes border-rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@utility animate-border-rainbow {
+  background-size: 200% 200%;
+  animation: border-rainbow 4s linear infinite;
+}
+

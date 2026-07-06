@@ -49,14 +49,14 @@ export function FAQ() {
           </p>
         </div>
 
-        <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.03] p-2 sm:p-4">
+        <div className="mt-12 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md p-4 shadow-2xl hover:border-white/15 transition duration-300">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="border-white/5">
-                <AccordionTrigger className="px-4 text-left text-base font-semibold hover:no-underline">
+              <AccordionItem key={i} value={`item-${i}`} className="border-white/5 last:border-b-0">
+                <AccordionTrigger className="px-4 text-left text-base font-bold hover:no-underline hover:text-[color:var(--color-brand-pink)] transition-colors duration-200">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="px-4 text-sm leading-relaxed text-muted-foreground">
+                <AccordionContent className="px-4 pb-4 text-sm leading-relaxed text-muted-foreground font-medium">
                   {f.a}
                 </AccordionContent>
               </AccordionItem>

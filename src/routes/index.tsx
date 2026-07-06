@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/monetrix/Navbar";
 import { Hero } from "@/components/monetrix/Hero";
 import { FomoStrip } from "@/components/monetrix/FomoStrip";
 import { Painpoints } from "@/components/monetrix/Painpoints";
@@ -9,6 +10,7 @@ import { Pricing } from "@/components/monetrix/Pricing";
 import { Testimonials } from "@/components/monetrix/Testimonials";
 import { FAQ } from "@/components/monetrix/FAQ";
 import { FinalCTA } from "@/components/monetrix/FinalCTA";
+import { Footer } from "@/components/monetrix/Footer";
 import { StickyMobileCTA } from "@/components/monetrix/StickyMobileCTA";
 import { LivePurchasePopup } from "@/components/monetrix/LivePurchasePopup";
 import { BackgroundGlows } from "@/components/monetrix/BackgroundGlows";
@@ -23,6 +25,7 @@ function Index() {
     <div className="relative min-h-screen overflow-x-hidden">
       <BackgroundGlows />
       <GrainOverlay />
+      <Navbar />
       <main className="relative z-[2]">
         <Hero />
         <FomoStrip />
@@ -35,8 +38,10 @@ function Index() {
         <FAQ />
         <FinalCTA />
       </main>
+      <Footer />
       <StickyMobileCTA />
       <LivePurchasePopup />
     </div>
   );
 }
+
